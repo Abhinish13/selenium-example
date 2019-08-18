@@ -9,8 +9,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.MarionetteDriver;
-import org.openqa.selenium.interactions.Actions;
+//import org.openqa.selenium.firefox.MarionetteDriver;
+//import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -63,7 +63,7 @@ public class ChromeDriverTest {
 
 
         assertTrue("The page title should be chagned as expected",
-                (new WebDriverWait(driver, 5))
+                (new WebDriverWait(driver, 7))
                         .until(new ExpectedCondition<Boolean>() {
                             public Boolean apply(WebDriver d) {
                                 return d.getTitle().equals("我眼中软件工程人员该有的常识");
