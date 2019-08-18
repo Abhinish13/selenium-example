@@ -9,6 +9,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+//[root@a42c68e72450docker pull selenium/standalone-chrome
+
 public class SimpleTest {
 
 	@Test
@@ -32,6 +34,12 @@ public class SimpleTest {
 			options.addArguments("--window-size=1920,1200");
 			options.addArguments("--headless");
 			options.addArguments("--user-agent=Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36");
+			options.addArguments("start-maximized"); // open Browser in maximized mode
+			options.addArguments("disable-infobars"); // disabling infobars
+			options.addArguments("--disable-extensions"); // disabling extensions
+			options.addArguments("--disable-gpu"); // applicable to windows os only
+			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+			options.addArguments("--no-sandbox"); // Bypass OS security model
 		}
 
 		driver = new ChromeDriver(options);
